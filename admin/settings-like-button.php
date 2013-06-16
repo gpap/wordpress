@@ -528,8 +528,9 @@ class Facebook_Like_Button_Settings extends Facebook_Social_Plugin_Button_Settin
 
 		if ( isset( $options['send'] ) && $options['send'] === 'true' )
 			$options['send'] = true;
-		if ( isset( $options['show-faces'] ) && $options['show-faces'] === 'true' ) {
-			$options['show_faces'] = true;
+		if ( isset( $options['show-faces'] ) ) {
+			if ( $options['show-faces'] === 'true' )
+				$options['show_faces'] = true;
 			unset( $options['show-faces'] );
 		}
 		if ( isset( $options['width'] ) )

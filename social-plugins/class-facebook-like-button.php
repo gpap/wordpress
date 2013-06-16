@@ -313,6 +313,8 @@ class Facebook_Like_Button extends Facebook_Social_Plugin {
 
 		if ( isset( $this->show_faces ) && $this->show_faces === true )
 			$data['show-faces'] = 'true';
+		else
+			$data['show-faces'] = 'false';
 
 		if ( isset( $this->width ) && is_int( $this->width ) && $this->width > 0 )
 			$data['width'] = strval( $this->width );
